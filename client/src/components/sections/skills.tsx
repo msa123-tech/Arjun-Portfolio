@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code2, Database, Layout, Server, Terminal, Wrench } from "lucide-react";
@@ -6,78 +5,62 @@ import { Code2, Database, Layout, Server, Terminal, Wrench } from "lucide-react"
 const skillCategories = [
   {
     title: "Languages",
-    icon: <Code2 className="w-5 h-5 text-primary" />,
-    skills: ["JavaScript (ES6+)", "TypeScript", "Java", "SQL", "HTML5", "CSS3"],
+    icon: <Code2 className="w-5 h-5" />,
+    skills: ["JavaScript", "TypeScript", "Java", "SQL", "HTML5", "CSS3"],
   },
   {
     title: "Frontend",
-    icon: <Layout className="w-5 h-5 text-primary" />,
-    skills: ["React", "Tailwind CSS", "Next.js (Learning)", "Responsive Design"],
+    icon: <Layout className="w-5 h-5" />,
+    skills: ["React", "Tailwind CSS", "Next.js", "Responsive Design"],
   },
   {
     title: "Backend",
-    icon: <Server className="w-5 h-5 text-primary" />,
+    icon: <Server className="w-5 h-5" />,
     skills: ["Node.js", "Express", "RESTful APIs", "JWT Auth"],
   },
   {
     title: "Databases",
-    icon: <Database className="w-5 h-5 text-primary" />,
+    icon: <Database className="w-5 h-5" />,
     skills: ["PostgreSQL", "MongoDB", "Mongoose"],
   },
   {
-    title: "Tools & DevOps",
-    icon: <Terminal className="w-5 h-5 text-primary" />,
-    skills: ["Git", "GitHub", "Docker (Basics)", "AWS (Fundamentals)", "Postman", "VS Code"],
+    title: "Tools",
+    icon: <Terminal className="w-5 h-5" />,
+    skills: ["Git", "Docker", "AWS", "Postman", "VS Code"],
   },
   {
     title: "Concepts",
-    icon: <Wrench className="w-5 h-5 text-primary" />,
+    icon: <Wrench className="w-5 h-5" />,
     skills: ["Data Structures", "Algorithms", "OOP", "SDLC", "Agile"],
   },
 ];
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-heading font-bold mb-4">Technical Skills</h2>
-          <p className="text-muted-foreground">My technical toolkit and areas of expertise.</p>
-        </motion.div>
+    <section id="skills" className="border-t border-border">
+      <div className="container">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Technical Skills</h2>
+          <p className="text-lg text-muted-foreground">Specialized toolkit for full-stack engineering.</p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {skillCategories.map((category, index) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full border border-border/50 hover:border-primary/50 transition-colors shadow-sm hover:shadow-md">
-                <CardHeader className="flex flex-row items-center space-x-3 pb-2">
-                  <div className="p-2 bg-primary/5 rounded-md">
-                    {category.icon}
-                  </div>
-                  <CardTitle className="text-lg font-semibold">{category.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <Badge key={skill} variant="secondary" className="font-normal text-muted-foreground hover:text-foreground transition-colors">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillCategories.map((category) => (
+            <div key={category.title} className="space-y-4">
+              <div className="flex items-center gap-3 text-foreground font-semibold">
+                <div className="p-2 bg-secondary rounded-lg">
+                  {category.icon}
+                </div>
+                {category.title}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <Badge key={skill} variant="secondary" className="px-3 py-1 font-medium bg-muted/50 text-muted-foreground border-transparent hover:bg-muted transition-colors">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,99 +5,74 @@ import { Mail, MapPin, Linkedin, Github } from "lucide-react";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-heading font-bold mb-4">Get In Touch</h2>
-          <p className="text-muted-foreground">Have a question or want to work together?</p>
-        </motion.div>
-
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <Card className="h-full">
-              <CardContent className="p-8 space-y-8">
-                <div>
-                  <h3 className="text-xl font-bold mb-6">Contact Information</h3>
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <Mail className="w-6 h-6 text-primary mt-1" />
-                      <div>
-                        <p className="font-medium">Email</p>
-                        <a href="mailto:msa642884@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                          msa642884@gmail.com
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-4">
-                      <MapPin className="w-6 h-6 text-primary mt-1" />
-                      <div>
-                        <p className="font-medium">Location</p>
-                        <p className="text-muted-foreground">Fairfax, VA</p>
-                      </div>
-                    </div>
-
-                    <div className="pt-6 flex gap-4">
-                      <Button size="icon" variant="outline" asChild>
-                         <a href="https://linkedin.com/in/ms-arjun-61637b230" target="_blank" rel="noopener noreferrer">
-                          <Linkedin className="w-5 h-5" />
-                        </a>
-                      </Button>
-                      <Button size="icon" variant="outline" disabled>
-                        <Github className="w-5 h-5" />
-                      </Button>
-                    </div>
-                  </div>
+    <section id="contact" className="border-t border-border bg-muted/20">
+      <div className="container">
+        <div className="grid md:grid-cols-2 gap-20">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Let's Connect</h2>
+            <p className="text-lg text-muted-foreground mb-12 max-w-md">
+              I'm always open to discussing new opportunities, creative projects, or mentorship.
+            </p>
+            
+            <div className="space-y-8">
+              <a href="mailto:msa642884@gmail.com" className="flex items-center gap-4 group">
+                <div className="p-4 bg-background rounded-2xl shadow-sm border border-border group-hover:border-primary/50 transition-colors">
+                  <Mail className="w-6 h-6 text-primary" />
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+                <div>
+                  <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Email</p>
+                  <p className="text-lg font-semibold group-hover:text-primary transition-colors">msa642884@gmail.com</p>
+                </div>
+              </a>
+              
+              <div className="flex items-center gap-4">
+                <div className="p-4 bg-background rounded-2xl shadow-sm border border-border">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">Location</p>
+                  <p className="text-lg font-semibold">Fairfax, VA</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4 pt-4">
+                <Button variant="outline" size="lg" className="h-14 w-14 rounded-2xl" asChild>
+                  <a href="https://linkedin.com/in/ms-arjun-61637b230" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" className="h-14 w-14 rounded-2xl cursor-not-allowed opacity-40" disabled>
+                  <Github className="w-6 h-6" />
+                </Button>
+              </div>
+            </div>
+          </div>
 
-          <motion.div
-             initial={{ opacity: 0, x: 20 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Card>
-              <CardContent className="p-8">
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">Name</label>
-                      <Input id="name" placeholder="Your name" />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">Email</label>
-                      <Input id="email" type="email" placeholder="Your email" />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">Subject</label>
-                    <Input id="subject" placeholder="What is this regarding?" />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">Message</label>
-                    <Textarea id="message" placeholder="Your message..." className="min-h-[120px]" />
-                  </div>
-                  <Button type="submit" className="w-full">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </motion.div>
+          <div className="bg-background p-8 md:p-12 rounded-[2rem] border border-border shadow-xl shadow-muted/20">
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Name</label>
+                  <Input placeholder="John Doe" className="h-12 bg-muted/30 border-none focus-visible:ring-primary" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Email</label>
+                  <Input type="email" placeholder="john@example.com" className="h-12 bg-muted/30 border-none focus-visible:ring-primary" />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Subject</label>
+                <Input placeholder="How can I help?" className="h-12 bg-muted/30 border-none focus-visible:ring-primary" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Message</label>
+                <Textarea placeholder="Tell me more..." className="min-h-[150px] bg-muted/30 border-none focus-visible:ring-primary resize-none" />
+              </div>
+              <Button type="submit" className="w-full h-14 text-lg font-bold rounded-2xl">
+                Send Message
+              </Button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
