@@ -1,56 +1,61 @@
+import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, MapPin } from "lucide-react";
 
 export function Experience() {
   return (
-    <section id="experience" className="border-t border-border bg-muted/20">
-      <div className="container">
-        <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Experience</h2>
-            <p className="text-muted-foreground">Professional journey and internships.</p>
-          </div>
+    <section id="experience" className="py-24 bg-muted/30">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl font-heading font-bold mb-4">Experience</h2>
+          <p className="text-muted-foreground">My professional and academic journey so far.</p>
+        </motion.div>
 
-          <div className="space-y-8">
-            <Card className="border-none shadow-none bg-transparent">
-              <CardHeader className="p-0 mb-4">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div>
-                    <CardTitle className="text-2xl font-bold mb-1">Academic Intern</CardTitle>
-                    <div className="flex items-center text-foreground font-semibold">
-                      VIT Chennai
-                    </div>
-                  </div>
-                  <div className="flex flex-col md:items-end text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      Jun 2022 – Dec 2023
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4" />
-                      Chennai, India
-                    </div>
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card className="border-l-4 border-l-primary shadow-sm">
+              <CardHeader>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                  <CardTitle className="text-xl font-bold text-primary">Academic Intern</CardTitle>
+                  <div className="flex items-center text-sm text-muted-foreground bg-background px-3 py-1 rounded-full border border-border w-fit">
+                    <Calendar className="w-3 h-3 mr-2" />
+                    <span>Jun 2022 – Dec 2023</span>
                   </div>
                 </div>
+                <div className="flex items-center text-muted-foreground font-medium">
+                  <span className="text-foreground">VIT Chennai</span>
+                  <span className="mx-2">•</span>
+                  <span className="flex items-center text-sm">
+                    <MapPin className="w-3 h-3 mr-1" /> Chennai, India
+                  </span>
+                </div>
               </CardHeader>
-              <CardContent className="p-0">
-                <ul className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                  <li className="flex gap-3">
-                    <span className="text-primary mt-2">●</span>
-                    <span>Assisted in coursework related to <strong className="text-foreground">Object-Oriented Programming (OOP)</strong> and <strong className="text-foreground">Data Structures & Algorithms (DSA)</strong>.</span>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                  <li>
+                    Assisted in coursework related to <strong className="text-foreground font-medium">Object-Oriented Programming (OOP)</strong> and <strong className="text-foreground font-medium">Data Structures & Algorithms (DSA)</strong>.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-primary mt-2">●</span>
-                    <span>Gained hands-on experience with <strong className="text-foreground">Java</strong> development and software engineering principles within an academic environment.</span>
+                  <li>
+                    Gained hands-on experience with <strong className="text-foreground font-medium">Java</strong> development and software engineering principles.
                   </li>
-                  <li className="flex gap-3">
-                    <span className="text-primary mt-2">●</span>
-                    <span>Collaborated with faculty to solve complex algorithmic problems and improve student code efficiency.</span>
+                  <li>
+                    Collaborated with faculty and peers to solve complex algorithmic problems and improve code efficiency.
                   </li>
                 </ul>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
