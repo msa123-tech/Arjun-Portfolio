@@ -24,11 +24,11 @@ export function Hero() {
               <Sparkles className="w-4 h-4" />
               Available for Internships
             </span>
-            <h1 className="text-4xl md:text-6xl font-heading font-extrabold tracking-tight text-foreground mb-6">
-              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent animate-gradient">Arjun</span>.
+            <h1 className="text-4xl md:text-5xl font-heading font-extrabold tracking-tight text-foreground mb-6">
+              Hi, I'm Arjun.
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Computer Science Undergraduate at <span className="text-foreground font-bold decoration-secondary decoration-2 underline-offset-4 underline">George Mason University</span>.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Computer Science Undergraduate at George Mason University.
               Specializing in full-stack development and backend systems.
             </p>
           </motion.div>
