@@ -29,7 +29,7 @@ export function Hero() {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Computer Science Undergraduate at <span className="text-foreground font-bold decoration-secondary decoration-2 underline-offset-4 underline">George Mason University</span>.
-              Crafting vibrant digital experiences with code.
+              Specializing in full-stack development and backend systems.
             </p>
           </motion.div>
 
@@ -49,8 +49,10 @@ export function Hero() {
               </a>
             </Button>
             
-            <Button size="lg" variant="ghost" className="h-12 px-8 text-base font-semibold rounded-full" disabled>
-               <FileText className="mr-2 h-4 w-4 text-muted-foreground" /> Resume
+            <Button size="lg" variant="ghost" className="h-12 px-8 text-base font-semibold rounded-full hover:bg-primary/10 transition-colors" asChild>
+              <a href="/Arjun_resume.pdf" target="_blank">
+                <FileText className="mr-2 h-4 w-4 text-primary" /> Resume
+              </a>
             </Button>
           </motion.div>
           
@@ -64,7 +66,7 @@ export function Hero() {
                <Mail className="h-6 w-6" />
                <span className="sr-only">Email</span>
              </a>
-             <a href="#" className="hover:text-foreground transition-all cursor-not-allowed opacity-40" title="Coming Soon">
+             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-all">
                <Github className="h-6 w-6" />
                <span className="sr-only">GitHub</span>
              </a>
