@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code2, Database, Layout, Server, Terminal, Wrench, Brain } from "lucide-react";
+import { Code2, Database, Layout, Server, Terminal, Brain } from "lucide-react";
 
 const skillCategories = [
   {
@@ -17,17 +17,17 @@ const skillCategories = [
   {
     title: "Backend",
     icon: <Server className="w-5 h-5 text-primary" />,
-    skills: ["REST APIs", "Django REST Framework", "FastAPI", "Microservices"],
+    skills: ["Node.js", "Express", "REST APIs", "Django REST Framework", "FastAPI", "Microservices"],
   },
   {
     title: "Databases",
     icon: <Database className="w-5 h-5 text-primary" />,
-    skills: ["PostgreSQL", "Relational Schema Design"],
+    skills: ["PostgreSQL", "MongoDB", "Relational Schema Design"],
   },
   {
     title: "Tools & Platforms",
     icon: <Terminal className="w-5 h-5 text-primary" />,
-    skills: ["Git", "GitHub", "Linux"],
+    skills: ["Git", "GitHub", "Docker (Basics)", "AWS (Fundamentals)", "Postman", "VS Code", "Linux"],
   },
   {
     title: "AI & Concepts",
