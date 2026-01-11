@@ -15,12 +15,11 @@ export function About() {
           
           <div className="prose prose-lg dark:prose-invert mx-auto text-muted-foreground leading-relaxed text-center">
             <p className="mb-6">
-              I am a driven Computer Science undergraduate at George Mason University (Class of 2026) based in Fairfax, VA. 
-              My journey in technology began with a fascination for how software shapes our world, leading me to explore full-stack development.
+              I am a Computer Science undergraduate at George Mason University (Expected Dec 2026) based in Fairfax, VA. 
+              Currently working as an AI Automation & Analytics Extern at Wayfair, where I build Python-based automation pipelines and AI-driven analytics solutions.
             </p>
             <p>
-              Previously, I gained valuable experience as an Academic Intern at VIT Chennai, where I honed my skills in Java, Object-Oriented Programming, and Data Structures. 
-              I am passionate about building efficient, scalable applications and am currently seeking opportunities to apply my skills in a challenging environment.
+              My expertise spans full-stack development, REST APIs, and AI integration. I'm passionate about leveraging LLMs, prompt engineering, and automation to solve complex business problems efficiently.
             </p>
           </div>
         </motion.div>

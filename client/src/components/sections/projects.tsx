@@ -1,26 +1,23 @@
 import { motion } from "framer-motion";
-import { FolderGit2, ExternalLink } from "lucide-react";
+import { FolderGit2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
     title: "Internship & Job Application Tracker",
-    description: "Backend-focused web application to manage and track internship applications. Developed 8+ RESTful APIs using Node.js and Express.",
-    tech: ["Node.js", "Express", "PostgreSQL", "REST APIs"],
-    period: "Jan 2025 – Present"
+    description: "Developed 7 REST API endpoints using Python and Django REST Framework. Designed normalized relational schemas and integrated 5 data sources into a unified data store, reducing report generation time by 25%.",
+    tech: ["Python", "Django REST", "PostgreSQL", "REST APIs"],
   },
   {
-    title: "Student Course & Assignment Management",
-    description: "Full-stack web application to manage academic deadlines. Implemented responsive UIs using React and Tailwind.",
-    tech: ["React", "Tailwind CSS", "Node.js", "Express"],
-    period: "Feb 2025"
+    title: "AI Resume Evaluation Tool",
+    description: "Automated resume evaluation workflows using Python and LLM APIs. Reduced manual resume review time by 30% through structured scoring and rule-based evaluation with strict input validation.",
+    tech: ["Python", "LLM APIs", "Prompt Engineering", "Automation"],
   },
   {
-    title: "AI-Powered Resume Feedback Tool",
-    description: "Analyzes resume content and generates structured feedback using OpenAI API. Designed backend endpoints for user input processing.",
-    tech: ["OpenAI API", "Node.js", "React", "API Design"],
-    period: "Mar 2025"
+    title: "Document Question Answering System",
+    description: "Designed a document-based Q&A system using vector similarity search and LLM-generated responses across 850+ documents. Reduced query latency by 150ms through modular architecture.",
+    tech: ["Python", "Vector Search", "LLM", "NLP"],
   }
 ];
 
@@ -52,10 +49,9 @@ export function Projects() {
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <FolderGit2 className="w-8 h-8 text-primary opacity-80" />
-                    <span className="text-xs text-muted-foreground font-mono">{project.period}</span>
                   </div>
                   <CardTitle className="group-hover:text-primary transition-colors">{project.title}</CardTitle>
-                  <CardDescription className="line-clamp-3 mt-2">{project.description}</CardDescription>
+                  <CardDescription className="line-clamp-4 mt-2">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mt-auto">

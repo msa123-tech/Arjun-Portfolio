@@ -1,38 +1,38 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code2, Database, Layout, Server, Terminal, Wrench } from "lucide-react";
+import { Code2, Database, Layout, Server, Terminal, Wrench, Brain } from "lucide-react";
 
 const skillCategories = [
   {
     title: "Languages",
     icon: <Code2 className="w-5 h-5 text-primary" />,
-    skills: ["JavaScript (ES6+)", "TypeScript", "Java", "SQL", "HTML5", "CSS3"],
+    skills: ["Python", "Java", "JavaScript", "SQL"],
   },
   {
     title: "Frontend",
     icon: <Layout className="w-5 h-5 text-primary" />,
-    skills: ["React", "Tailwind CSS", "Next.js (Learning)", "Responsive Design"],
+    skills: ["React", "HTML", "CSS", "Responsive Design"],
   },
   {
     title: "Backend",
     icon: <Server className="w-5 h-5 text-primary" />,
-    skills: ["Node.js", "Express", "RESTful APIs", "JWT Auth"],
+    skills: ["REST APIs", "Django REST Framework", "FastAPI", "Microservices"],
   },
   {
     title: "Databases",
     icon: <Database className="w-5 h-5 text-primary" />,
-    skills: ["PostgreSQL", "MongoDB", "Mongoose"],
+    skills: ["PostgreSQL", "Relational Schema Design"],
   },
   {
-    title: "Tools & DevOps",
+    title: "Tools & Platforms",
     icon: <Terminal className="w-5 h-5 text-primary" />,
-    skills: ["Git", "GitHub", "Docker (Basics)", "AWS (Fundamentals)", "Postman", "VS Code"],
+    skills: ["Git", "GitHub", "Linux"],
   },
   {
-    title: "Concepts",
-    icon: <Wrench className="w-5 h-5 text-primary" />,
-    skills: ["Data Structures", "Algorithms", "OOP", "SDLC", "Agile"],
+    title: "AI & Concepts",
+    icon: <Brain className="w-5 h-5 text-primary" />,
+    skills: ["LLM APIs", "Prompt Engineering", "AI-Assisted Dev", "OOP", "Data Structures", "Algorithms"],
   },
 ];
 

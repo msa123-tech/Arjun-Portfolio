@@ -22,14 +22,14 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-primary/10 text-primary text-sm font-bold mb-6 border border-primary/20 shadow-sm">
               <Sparkles className="w-4 h-4" />
-              Available for Internships
+              AI Automation Extern @ Wayfair
             </span>
             <h1 className="text-4xl md:text-5xl font-heading font-extrabold tracking-tight text-foreground mb-6">
               Hi, I'm Arjun.
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Computer Science Undergraduate at George Mason University.
-              Specializing in full-stack development and backend systems.
+              Building AI-powered automation and full-stack applications.
             </p>
           </motion.div>
 
@@ -62,11 +62,11 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="pt-12 flex justify-center gap-8 text-muted-foreground"
           >
-             <a href="mailto:msa642884@gmail.com" className="hover:text-primary transition-all scale-110 hover:scale-125">
+             <a href="mailto:msa64288@gmail.com" className="hover:text-primary transition-all scale-110 hover:scale-125">
                <Mail className="h-6 w-6" />
                <span className="sr-only">Email</span>
              </a>
-             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-all">
+             <a href="https://github.com/msa123-tech" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-all hover:scale-125">
                <Github className="h-6 w-6" />
                <span className="sr-only">GitHub</span>
              </a>

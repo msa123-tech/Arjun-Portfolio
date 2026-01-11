@@ -36,8 +36,8 @@ export function Contact() {
                       <Mail className="w-6 h-6 text-primary mt-1" />
                       <div>
                         <p className="font-medium">Email</p>
-                        <a href="mailto:msa642884@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                          msa642884@gmail.com
+                        <a href="mailto:msa64288@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                          msa64288@gmail.com
                         </a>
                       </div>
                     </div>
@@ -66,8 +66,10 @@ export function Contact() {
                           <Linkedin className="w-5 h-5" />
                         </a>
                       </Button>
-                      <Button size="icon" variant="outline" disabled>
-                        <Github className="w-5 h-5" />
+                      <Button size="icon" variant="outline" asChild>
+                        <a href="https://github.com/msa123-tech" target="_blank" rel="noopener noreferrer">
+                          <Github className="w-5 h-5" />
+                        </a>
                       </Button>
                     </div>
                   </div>
